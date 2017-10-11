@@ -35,6 +35,8 @@ Route::get('/',function(){
     return redirect('ye');
 });
 
-Route::get('dashboard',function(){
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('dashboard',function(){
     return'dashboard';
+    });
 });
