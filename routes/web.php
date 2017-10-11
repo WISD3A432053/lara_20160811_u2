@@ -23,8 +23,12 @@ Route::get('/',function(){
     return redirect('welcome');
 });
 
-Route::get('say/{name?}',['as' => 'hello.index', function($name = 'Everybody'){
+Route::get('hello/{name?}',['as' => 'hello.index', function($name = 'Everybody'){
     return 'Hello, '.$name;
+}]);
+
+Route::get('say/{name?}',['as'=>'hello.index',function($name = 'Everybody'){
+    return view('welcome');
 }]);
 
 Route::get('/',function(){
