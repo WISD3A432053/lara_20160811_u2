@@ -34,3 +34,7 @@ Route::get('say/{name?}',['as'=>'hello.index',function($name = 'Everybody'){
 Route::get('/',function(){
     return redirect('ye');
 });
+
+Route::get('dashboard',function(){
+    return'dashboard';
+});
